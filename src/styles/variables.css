@@ -1,0 +1,40 @@
+/* ─────────────────────────────────────────
+   DESIGN TOKENS
+   All colors, fonts, spacing in one place.
+   Change here → updates everywhere.
+───────────────────────────────────────── */
+:root {
+  /* Colors */
+  --color-accent:       #2D4A1E;
+  --color-accent-mid:   #4A7A2E;
+  --color-accent-light: #E8F0DC;
+  --color-ink:          #1C1C1E;
+  --color-stone:        #8E8E93;
+  --color-wheat:        #D8D4C8;
+  --color-bg:           #F7F5F0;
+  --color-surface:      #FFFFFF;
+  --color-canvas-bg:    #EEF0EA;
+
+  /* Hero dark gradient */
+  --gradient-hero: linear-gradient(160deg, #0f1a08, #1a2e0d 35%, #243d14 65%, #0d1506);
+
+  /* Toolbar dark gradient */
+  --gradient-toolbar: linear-gradient(180deg, #1a2e0d, #0f1a08);
+
+  /* Fonts */
+  --font-display: 'Playfair Display', serif;
+  --font-mono:    'DM Mono', monospace;
+  --font-sans:    'DM Sans', sans-serif;
+
+  /* Border radius */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --radius-xl:  24px;
+  --radius-pill: 99px;
+
+  /* Shadows */
+  --shadow-card:   0 20px 40px rgba(28, 28, 30, 0.09);
+  --shadow-canvas: 0 16px 48px rgba(28, 28, 30, 0.1), 0 0 0 1px rgba(28, 28, 30, 0.07);
+  --shadow-panel:  -20px 0 60px rgba(0, 0, 0, 0.08);
+}

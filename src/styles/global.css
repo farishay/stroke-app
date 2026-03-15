@@ -1,0 +1,94 @@
+@import './variables.css';
+@import './components.css';
+
+/* ─────────────────────────────────────────
+   RESET
+───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #F7F5F0;
+  color: #1C1C1E;
+  overflow-x: hidden;
+}
+
+/* ─────────────────────────────────────────
+   SCROLLBAR
+───────────────────────────────────────── */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-thumb { background: #D8D4C8; border-radius: 2px; }
+
+/* ─────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────── */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+}
+
+/* ─────────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────────── */
+@keyframes drawStroke {
+  from { stroke-dashoffset: 800; }
+  to   { stroke-dashoffset: 0;   }
+}
+
+@keyframes floatA {
+  0%, 100% { transform: translateY(0)    rotate(-10deg); }
+  50%       { transform: translateY(-12px) rotate(-8deg);  }
+}
+
+@keyframes floatB {
+  0%, 100% { transform: translateY(0)   rotate(7deg); }
+  50%       { transform: translateY(-9px) rotate(9deg); }
+}
+
+@keyframes penBounce {
+  0%, 100% { transform: translateY(0);    }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes typingDot {
+  0%, 80%, 100% { transform: translateY(0);    }
+  40%            { transform: translateY(-5px); }
+}
+
+/* ─────────────────────────────────────────
+   ANIMATION CLASSES
+───────────────────────────────────────── */
+.float-a    { animation: floatA    6s   ease-in-out infinite; }
+.float-b    { animation: floatB    7.5s ease-in-out infinite; }
+.pen-bounce { animation: penBounce 1.2s ease-in-out infinite; }
+
+.path-draw {
+  stroke-dasharray:  800;
+  stroke-dashoffset: 800;
+  animation: drawStroke 2.5s ease forwards;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE HELPERS
+───────────────────────────────────────── */
+.hide-mobile  { display: none;  }
+.show-mobile  { display: flex;  }
+
+@media (min-width: 640px) {
+  .hide-mobile { display: flex; }
+  .show-mobile { display: none; }
+}

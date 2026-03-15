@@ -1,0 +1,17 @@
+.modalClose {
+  width:           30px;
+  height:          30px;
+  border-radius:   var(--radius-pill);
+  border:          none;
+  background:      transparent;
+  cursor:          pointer;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  color:           var(--color-stone);
+  transition:      all .2s;
+}
+.modalClose:hover {
+  background: var(--color-accent-light);
+  color:      var(--color-ink);
+}
